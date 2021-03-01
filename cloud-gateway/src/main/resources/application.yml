@@ -1,0 +1,61 @@
+
+  
+
+server:
+  port : 9191
+  
+  
+
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      enabled: true
+      routes:
+        - id: account-service
+          uri: lb://account-service
+          predicates:
+            - Path=/Banking_Application/account/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: account-service
+                fallbackuri: forward:/accountServiceFallBack
+        - id: customer-service
+          uri: lb://customer-service
+          predicates:
+            - Path=/Banking_Application/customer/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: customer-service
+                fallbackuri: forward:/customerServiceFallBack
+      
+
+
+hystrix:
+  command:
+    fallbackcmd:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 4000   
+
+      
+            
+#actuator configuration
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream 
+    
+  eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
