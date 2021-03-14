@@ -1,9 +1,9 @@
 package com.banking.customer.service;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -12,7 +12,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import com.banking.customer.file.FileUploadRepository;
+import com.banking.customer.file.UploadedFile;
 import com.banking.customer.model.Address;
 import com.banking.customer.model.AddressDetails;
 import com.banking.customer.model.Contact;
@@ -27,7 +30,8 @@ public class CustomerServiceImpl implements CustomerService {
 
 	@Autowired
 	private CustomerRepository customerRepository;
-
+	@Autowired
+	private FileUploadRepository fileUploadRepository;
 	/*
 	 * @Autowired private BankingServiceHelper bankingServiceHelper;
 	 */
@@ -55,7 +59,7 @@ public class CustomerServiceImpl implements CustomerService {
 	public ResponseEntity<Object> addCustomer(CustomerDetails customerDetails) {
 
 		Customer customer = convertToCustomerEntity(customerDetails);
-		customer.setCreateDateTime(LocalDate.of(2014, Month.DECEMBER, 12));//set(1900, 12, 10, 00, 00));
+		customer.setCreateDateTime(LocalDate.of(2014, Month.DECEMBER, 12));// set(1900, 12, 10, 00, 00));
 		customer.setUpdateDateTime(new Date());
 		customerRepository.save(customer);
 
@@ -175,8 +179,7 @@ public class CustomerServiceImpl implements CustomerService {
 				.lastName(customerDetails.getLastName()).customerNumber(customerDetails.getCustomerNumber())
 				.status(customerDetails.getStatus())
 				.contactDetails(convertToContactEntity(customerDetails.getContactDetails()))
-				.customerAddress(convertToAddressEntity(customerDetails.getCustomerAddress()))
-				.build();
+				.customerAddress(convertToAddressEntity(customerDetails.getCustomerAddress())).build();
 	}
 
 	public Address convertToAddressEntity(AddressDetails addressDetails) {
@@ -191,4 +194,28 @@ public class CustomerServiceImpl implements CustomerService {
 		return Contact.builder().emailId(contactDetails.getEmailId()).homePhone(contactDetails.getHomePhone())
 				.workPhone(contactDetails.getWorkPhone()).build();
 	}
+
+	@Override// file upload
+	public UploadedFile uploadToDb(MultipartFile file) {
+
+		UploadedFile uploadedFile = new UploadedFile();
+		try {
+			uploadedFile.setFileData(file.getBytes());
+			uploadedFile.setFileType(file.getContentType());
+			uploadedFile.setFileName(file.getOriginalFilename());
+			
+			return fileUploadRepository.save(uploadedFile);
+			} 
+		catch (IOException e) {
+			e.printStackTrace();
+			return null;
+		}
+
+	}
+
+	@Override
+	 public UploadedFile downloadFile(String fileId) {
+        UploadedFile uploadedFileToRet = fileUploadRepository.getOne(fileId);
+        return uploadedFileToRet;
+    }
 }
