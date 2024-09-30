@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.com.crnk.demo</groupId>
+    <artifactId>crnk-demo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.9.RELEASE</version> <!-- Use the latest compatible version -->
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+
+    <properties>
+        <java.version>1.8</java.version> <!-- Java version depends on your environment -->
+        <!--<maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>-->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <crnk.version>2.4.20171211095351</crnk.version>
+        <okhttp.version>5.0.0-alpha.3</okhttp.version>
+    </properties>
+    <dependencies>
+
+
+        <!-- Spring Boot Starter Web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Spring Boot Starter JPA -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <!--<dependency>
+            <groupId>io.crnk</groupId>
+            <artifactId>crnk-setup-spring-boot2</artifactId>
+            <version>3.4.20210508153845</version>
+        </dependency>
+        <dependency>
+            <groupId>io.crnk</groupId>
+            <artifactId>crnk-client</artifactId>
+            <version>3.4.20210508153845</version>
+            <scope>test</scope>
+        </dependency>
+-->
+
+        <!-- H2 Database -->
+        <!--<dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>-->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>2.2.224</version>
+            <scope>runtime</scope>
+        </dependency>
+
+
+        <!-- crnk -->
+        <dependency>
+            <groupId>io.crnk</groupId>
+            <artifactId>crnk-core</artifactId>
+            <version>${crnk.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.crnk</groupId>
+            <artifactId>crnk-spring</artifactId>
+            <version>${crnk.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.crnk</groupId>
+            <artifactId>crnk-client</artifactId>
+            <version>${crnk.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.crnk</groupId>
+            <artifactId>crnk-jpa</artifactId>
+            <version>${crnk.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+
+<!--
+        &lt;!&ndash; Crnk Core (Required for JSON API functionalities) &ndash;&gt;
+        <dependency>
+            <groupId>io.crnk</groupId>
+            <artifactId>crnk-core</artifactId>
+            <version>3.4.20210509072026</version>
+        </dependency>
+
+
+
+        &lt;!&ndash; Crnk JPA (Integration for Spring Data JPA) &ndash;&gt;
+        <dependency>
+            <groupId>io.crnk</groupId>
+            <artifactId>crnk-jpa</artifactId>
+            <version>2.6.20180430102904</version>
+            <scope>test</scope>
+        </dependency>
+
+
+        &lt;!&ndash; Crnk Spring (for Spring Boot integration) &ndash;&gt;
+        <dependency>
+            <groupId>io.crnk</groupId>
+            <artifactId>crnk-spring</artifactId>
+            <version>2.5.20180326220647</version>
+            <scope>test</scope>
+        </dependency>
+
+        &lt;!&ndash; Spring Boot DevTools for easier development (optional) &ndash;&gt;
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>-->
+
+        <!-- Spring Boot Starter for Test -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+       <!-- <dependency>
+            <groupId>io.crnk</groupId>
+            <artifactId>crnk-spring</artifactId>
+            <version>2.5.20180326220647</version>
+            <scope>compile</scope>
+        </dependency>
+
+
+        <dependency>
+            <groupId>io.crnk</groupId>
+            <artifactId>crnk-jpa</artifactId>
+            <version>2.6.20180430102904</version>
+            <scope>compile</scope>
+        </dependency>-->
+        <!-- okhttp -->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>${okhttp.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Spring Boot Maven Plugin -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
