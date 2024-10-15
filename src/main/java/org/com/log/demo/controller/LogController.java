@@ -22,9 +22,9 @@ public class LogController {
     String correlationId= UUID.randomUUID().toString();
     MDC.put("ggid", correlationId);
 
-    logger.info("Handling /example request usin logger");
+    logger.info("Handling /example request using org slf4j logger");
 
-    log.info("Handling /example request slf4j log");
+    log.info("Handling /example request lombok slf4j log");
 
     return "This is a response with a correlation ID.";
   }

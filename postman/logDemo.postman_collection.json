@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "635bbc01-8fd6-4861-8885-689bbf994343",
+		"name": "logDemo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8475586"
+	},
+	"item": [
+		{
+			"name": "log",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"esId\": \"es1i7\",\r\n    \"securityCore\": {\r\n        // \"sSecId\": \"sSecurityCoreId-111\",\r\n        \"relatedSecurities\": [\r\n            {\r\n                \"componentName\": \"c1\",\r\n                \"componentWeight\": 187.9,\r\n                \"relationshipType\": \"active\",\r\n                \"relatedSSID\": 1198,\r\n                \"relationshipRole\": \"Component\"\r\n            }\r\n        ]\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9091/api/example",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"api",
+						"example"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
