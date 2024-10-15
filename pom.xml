@@ -17,16 +17,10 @@
 
 
     <properties>
-        <java.version>1.8</java.version> <!-- Java version depends on your environment -->
-        <!--<maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>-->
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <crnk.version>2.4.20171211095351</crnk.version>
-        <okhttp.version>5.0.0-alpha.3</okhttp.version>
+     <java.version>1.8</java.version> <!-- Java version depends on your environment -->
+     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencies>
-
-
         <!-- Spring Boot Starter Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -37,64 +31,7 @@
             <artifactId>spring-web</artifactId>
             <version>4.3.11.RELEASE</version>
         </dependency>
-
-        <!-- Spring Boot Starter JPA -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-        <!--<dependency>
-            <groupId>io.crnk</groupId>
-            <artifactId>crnk-setup-spring-boot2</artifactId>
-            <version>3.4.20210508153845</version>
-        </dependency>
-        <dependency>
-            <groupId>io.crnk</groupId>
-            <artifactId>crnk-client</artifactId>
-            <version>3.4.20210508153845</version>
-            <scope>test</scope>
-        </dependency>
--->
-
-        <!-- H2 Database -->
-        <!--<dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <scope>runtime</scope>
-        </dependency>-->
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <version>2.2.224</version>
-            <scope>runtime</scope>
-        </dependency>
-
-
-        <!-- crnk -->
-        <dependency>
-            <groupId>io.crnk</groupId>
-            <artifactId>crnk-core</artifactId>
-            <version>${crnk.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.crnk</groupId>
-            <artifactId>crnk-spring</artifactId>
-            <version>${crnk.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.crnk</groupId>
-            <artifactId>crnk-client</artifactId>
-            <version>${crnk.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.crnk</groupId>
-            <artifactId>crnk-jpa</artifactId>
-            <version>${crnk.version}</version>
-            <scope>test</scope>
-        </dependency>
-
-
-<!--Log-->
+        <!--Log-->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -112,13 +49,6 @@
             <scope>provided</scope>
         </dependency>
         <!--Log-->
-
-        <!-- okhttp -->
-        <dependency>
-            <groupId>com.squareup.okhttp3</groupId>
-            <artifactId>okhttp</artifactId>
-            <version>${okhttp.version}</version>
-        </dependency>
     </dependencies>
 
     <build>
