@@ -1,4 +1,4 @@
-package org.com.crnk.demo.model;
+package org.com.log.demo.model;
 
 import io.crnk.core.resource.annotations.JsonApiId;
 import io.crnk.core.resource.annotations.JsonApiRelation;

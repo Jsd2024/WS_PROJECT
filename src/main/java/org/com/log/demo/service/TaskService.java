@@ -1,7 +1,7 @@
-package org.com.crnk.demo.service;
+package org.com.log.demo.service;
 
-import org.com.crnk.demo.model.Task;
-import org.com.crnk.demo.repository.TaskRepository;
+import org.com.log.demo.model.Task;
+import org.com.log.demo.repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

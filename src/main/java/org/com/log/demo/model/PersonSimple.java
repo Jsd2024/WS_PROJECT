@@ -1,4 +1,4 @@
-package org.com.crnk.demo.model;
+package org.com.log.demo.model;
 
 //import jakarta.persistence.Entity;
 //import jakarta.persistence.GeneratedValue;

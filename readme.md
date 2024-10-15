@@ -579,7 +579,7 @@ java
 Copy code
 package org.com.crnk.demo.repository;
 
-import org.com.crnk.demo.model.Task;
+import model.org.com.log.demo.Task;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -621,7 +621,7 @@ package org.com.crnk.demo.repository;
 import io.crnk.core.queryspec.QuerySpec;
 import io.crnk.core.repository.ResourceRepositoryBase;
 import io.crnk.core.resource.list.ResourceList;
-import org.com.crnk.demo.model.Task;
+import model.org.com.log.demo.Task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

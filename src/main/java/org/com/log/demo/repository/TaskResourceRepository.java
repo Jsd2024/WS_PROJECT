@@ -3,7 +3,7 @@
 //import io.crnk.core.queryspec.QuerySpec;
 //import io.crnk.core.repository.ResourceRepositoryBase;
 //import io.crnk.core.resource.list.ResourceList;
-//import org.com.crnk.demo.model.Task;
+//import model.org.com.log.demo.Task;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.stereotype.Component;
 //
@@ -45,15 +45,13 @@
 //}
 
 
-package org.com.crnk.demo.repository;
+package org.com.log.demo.repository;
 
 import io.crnk.core.queryspec.QuerySpec;
 import io.crnk.core.repository.ResourceRepositoryBase;
 import io.crnk.core.resource.list.ResourceList;
 import org.springframework.stereotype.Component;
-import org.com.crnk.demo.model.Task;
-
-import javax.annotation.PostConstruct;
+import org.com.log.demo.model.Task;
 
 @Component
 public class TaskResourceRepository extends ResourceRepositoryBase<Task, Long> {

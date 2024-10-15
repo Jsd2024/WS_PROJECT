@@ -1,9 +1,9 @@
-package org.com.crnk.demo.repository;
+package org.com.log.demo.repository;
 
 import io.crnk.core.queryspec.QuerySpec;
 import io.crnk.core.repository.ResourceRepositoryBase;
 import io.crnk.core.resource.list.ResourceList;
-import org.com.crnk.demo.model.Article;
+import org.com.log.demo.model.Article;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;

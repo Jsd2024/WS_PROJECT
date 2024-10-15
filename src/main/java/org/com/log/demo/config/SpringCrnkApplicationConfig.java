@@ -1,13 +1,11 @@
-package org.com.crnk.demo.config;
+package org.com.log.demo.config;
 
 import javax.annotation.PostConstruct;
 
-import org.com.crnk.demo.model.Article;
-import org.com.crnk.demo.model.Person;
-import org.com.crnk.demo.model.Task;
-import org.com.crnk.demo.repository.ArticleRepository;
-import org.com.crnk.demo.repository.PersonRepository;
-import org.com.crnk.demo.service.TaskService;
+import org.com.log.demo.model.Article;
+import org.com.log.demo.model.Person;
+import org.com.log.demo.repository.ArticleRepository;
+import org.com.log.demo.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 

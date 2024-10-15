@@ -1,9 +1,9 @@
 //package org.com.crnk.demo.controller;
 //
-//import org.com.crnk.demo.model.PersonSimple;
-//import org.com.crnk.demo.model.Task;
-//import org.com.crnk.demo.service.PersonSimpleService;
-//import org.com.crnk.demo.service.TaskService;
+//import model.org.com.log.demo.PersonSimple;
+//import model.org.com.log.demo.Task;
+//import service.org.com.log.demo.PersonSimpleService;
+//import service.org.com.log.demo.TaskService;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.web.bind.annotation.*;
 //

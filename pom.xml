@@ -32,6 +32,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>4.3.11.RELEASE</version>
+        </dependency>
 
         <!-- Spring Boot Starter JPA -->
         <dependency>
@@ -89,61 +94,25 @@
         </dependency>
 
 
-<!--
-        &lt;!&ndash; Crnk Core (Required for JSON API functionalities) &ndash;&gt;
+<!--Log-->
         <dependency>
-            <groupId>io.crnk</groupId>
-            <artifactId>crnk-core</artifactId>
-            <version>3.4.20210509072026</version>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.32</version>
         </dependency>
-
-
-
-        &lt;!&ndash; Crnk JPA (Integration for Spring Data JPA) &ndash;&gt;
         <dependency>
-            <groupId>io.crnk</groupId>
-            <artifactId>crnk-jpa</artifactId>
-            <version>2.6.20180430102904</version>
-            <scope>test</scope>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
         </dependency>
-
-
-        &lt;!&ndash; Crnk Spring (for Spring Boot integration) &ndash;&gt;
         <dependency>
-            <groupId>io.crnk</groupId>
-            <artifactId>crnk-spring</artifactId>
-            <version>2.5.20180326220647</version>
-            <scope>test</scope>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.34</version>
+            <scope>provided</scope>
         </dependency>
+        <!--Log-->
 
-        &lt;!&ndash; Spring Boot DevTools for easier development (optional) &ndash;&gt;
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <scope>runtime</scope>
-            <optional>true</optional>
-        </dependency>-->
-
-        <!-- Spring Boot Starter for Test -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-       <!-- <dependency>
-            <groupId>io.crnk</groupId>
-            <artifactId>crnk-spring</artifactId>
-            <version>2.5.20180326220647</version>
-            <scope>compile</scope>
-        </dependency>
-
-
-        <dependency>
-            <groupId>io.crnk</groupId>
-            <artifactId>crnk-jpa</artifactId>
-            <version>2.6.20180430102904</version>
-            <scope>compile</scope>
-        </dependency>-->
         <!-- okhttp -->
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>

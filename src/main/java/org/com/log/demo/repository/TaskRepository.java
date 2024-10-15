@@ -1,6 +1,6 @@
-package org.com.crnk.demo.repository;
+package org.com.log.demo.repository;
 
-import org.com.crnk.demo.model.Task;
+import org.com.log.demo.model.Task;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,7 +1,7 @@
-package org.com.crnk.demo.service;
+package org.com.log.demo.service;
 
-import org.com.crnk.demo.model.PersonSimple;
-import org.com.crnk.demo.repository.PersonSimpleRepository;
+import org.com.log.demo.model.PersonSimple;
+import org.com.log.demo.repository.PersonSimpleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
